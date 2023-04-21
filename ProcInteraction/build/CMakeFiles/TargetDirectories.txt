@@ -1,0 +1,3 @@
+/home/reznik24/ParProg/ProcInteraction/build/CMakeFiles/rebuild_cache.dir
+/home/reznik24/ParProg/ProcInteraction/build/CMakeFiles/edit_cache.dir
+/home/reznik24/ParProg/ProcInteraction/build/CMakeFiles/main.dir

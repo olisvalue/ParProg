@@ -1,0 +1,3 @@
+/home/reznik24/ParProg/PiCalculation/build/CMakeFiles/rebuild_cache.dir
+/home/reznik24/ParProg/PiCalculation/build/CMakeFiles/edit_cache.dir
+/home/reznik24/ParProg/PiCalculation/build/CMakeFiles/main.dir

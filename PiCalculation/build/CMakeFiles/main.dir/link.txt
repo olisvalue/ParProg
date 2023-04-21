@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/main.dir/CalcPi.c.o  -o main  -lmpichcxx -lmpich -lm 
