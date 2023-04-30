@@ -29,6 +29,7 @@ plt.ylabel("Time, seconds")
 plt.title("Dependence of interaction time on data size")
 plt.minorticks_on()
 plt.grid()
+
 os.chdir("..")
 current_dir = os.getcwd()
 print_cyan(f"Saving graph to f{current_dir}")

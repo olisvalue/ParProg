@@ -16,6 +16,6 @@ os.chdir("build")
 os.system("make")
 
 print_cyan("calculating...")
-cmd = "mpirun -np " + "8" + " ./main " + iters
+cmd = "mpirun -np " + "8" + " ./main " + str(iters)
 result = subprocess.check_output(cmd, shell=True, text=True)
 print(result)

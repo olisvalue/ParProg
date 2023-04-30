@@ -1,3 +1,14 @@
-cmake_install.cmake
+code/    
+.idea/   
+.DS_Store
+*.iml    
+.project 
+.settings
+.classpath
+.recommenders
+.mvn/wrapper/maven-wrapper.jar
+.factorypath
+cmake-build-debug/
+build/
+*.out
 venv
-cmake-build-debug
