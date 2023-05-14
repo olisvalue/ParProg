@@ -3,9 +3,6 @@
 #include <stdlib.h>
 #include <mpi.h>
 
-#define pi 3.14159265359
-
-
 void write_to_file(int rank, int num_procs, double* data, int num_rows, int col_num, char* filename) {
     MPI_File file;
     MPI_File_open(MPI_COMM_WORLD, filename, MPI_MODE_CREATE| MPI_MODE_WRONLY, MPI_INFO_NULL, &file); // открываем файл для записи
@@ -14,7 +11,7 @@ void write_to_file(int rank, int num_procs, double* data, int num_rows, int col_
     MPI_File_close(&file); // закрываем файл
 }
 
-double phi(double x0){return cos(pi * x0);}
+double phi(double x0){return cos(M_PI * x0);}
 double psi(double t0){return exp(-t0);}
 double alpha(double t, double x){return 2;}
 double f(double t, double x){return t+x;}

@@ -4,10 +4,7 @@
 #include <string.h>
 #include <mpi.h>
 
-#define pi 3.14159265359
-
-
-double phi(double x0){return cos(pi * x0);}
+double phi(double x0){return cos(M_PI * x0);}
 double psi(double t0){return exp(-t0);}
 double alpha(double t, double x){return 2;}
 double f(double t, double x){return t+x;}
