@@ -162,7 +162,7 @@ int main(int argc, char** argv) {
             buf[j] = ' ';
         }
         int sh;
-        for (int j = 0; j < num_xs - 1; ++j) {
+        for (int j = 0; j < num_xs-1; ++j) {
             if (rank != 0){
                 sh = sprintf(buf + j * size, "%.8lf,", u[i][j+1]);
             }
@@ -175,14 +175,14 @@ int main(int argc, char** argv) {
         if (rank == (num_procs - 1)) {
             sh = sprintf(buf + (num_xs - 2) * size, "%.8lf", u[i][num_xs - 1]);
             buf[(num_xs - 2) * size + sh] = ' ';
-            buf[(num_xs - 2) * size + size-1] = '\n';
+            buf[(num_xs - 1) * size + size-1] = '\n';
         } else {
             sh = sprintf(buf + (num_xs - 1) * size, "%.8lf,", u[i][num_xs - 1]);
             buf[(num_xs - 1) * size + sh] = ' ';
         }
 
         MPI_Offset offset = i * n * size + n0 * size;
-        MPI_File_write_at(file, offset, buf, size * numsizebuf, MPI_CHAR, MPI_STATUS_IGNORE);
+        MPI_File_write_at(file, offset, buf, size * (numsizebuf), MPI_CHAR, MPI_STATUS_IGNORE);
     }
 
     MPI_File_close(&file); // закрываем файл
